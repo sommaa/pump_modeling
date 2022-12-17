@@ -24,3 +24,8 @@ Modeling of a centrifugal water pump, placed in a steam reforming plant, using O
 
 - Stream tracing
 ![alt text](https://github.com/sommaa/pump_modeling/blob/main/images/PUMP_steamtrac.png)
+
+# Blender renders
+![alt text](https://github.com/sommaa/pump_modeling/blob/main/images/girante%202.png)
+![alt text](https://github.com/sommaa/pump_modeling/blob/main/images/girante%20e%20vol.png)
+![alt text](https://github.com/sommaa/pump_modeling/blob/main/images/voluta%202.png)
