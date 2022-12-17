@@ -1,0 +1,442 @@
+//         ________  ___  ___  _____ ______   ________            //
+//        |\   __  \|\  \|\  \|\   _ \  _   \|\   __  \           //
+//        \ \  \|\  \ \  \\\  \ \  \\\__\ \  \ \  \|\  \          //
+//         \ \   ____\ \  \\\  \ \  \\|__| \  \ \   ____\         //
+//          \ \  \___|\ \  \\\  \ \  \    \ \  \ \  \___|         //
+//           \ \__\    \ \_______\ \__\    \ \__\ \__\            //
+//            \|__|     \|_______|\|__|     \|__|\|__|            //
+//                                                                //  
+//                    Author: Andrea Somma;                       // 
+//                    Politecnico of Milan 2021-2022              // 
+//                                                                //
+
+FoamFile {
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object controlDict;
+}
+functions {
+    sigHandler {
+        type openFoamWriteOldTimesOnSignal;
+        sleepSecondsBeforeReraising 60;
+        numberOfTimestepsToStore 1;
+        writeCurrent false;
+        sigFPE true;
+        sigSEGV false;
+        sigINT false;
+        sigQUIT true;
+    }
+    flexibleWriter {
+        type flexibleWriter;
+        clockTimeLimit 60;
+        fracTime 0.1;
+    }
+    divergenceHandler {
+        type divergenceHandler;
+        nItersToSkip 50;
+        U 10000000.0;
+        p -1000000000000000.0 1000000000000000.0;
+        scalarFields (p);
+        vectorFields (U);
+        active yes;
+    }
+    ConvergenceIndicator {
+        type convergenceIndicator;
+        scalarFields (p);
+        vectorFields (U);
+    }
+    pressureTools0 {
+        enabled on;
+        executeControl outputTime;
+        executeInterval 1;
+        writeControl writeTime;
+        writeInterval 1;
+        log off;
+        type pressure;
+        libs ("fieldFunctionObjects");
+        p p;
+        U U;
+        rho rhoInf;
+        rhoInf 997.33;
+        pRef 0.0;
+        resultName pressureFields_tot;
+        mode total;
+    }
+    wallShearStress1 {
+        enabled on;
+        executeControl outputTime;
+        executeInterval 1;
+        writeControl outputTime;
+        writeInterval 1;
+        log off;
+        type wallShearStress;
+        libs (fieldFunctionObjects);
+    }
+    forces2 {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type scaledForces;
+        libs ("libforces.so");
+        patches (
+            face22
+            face23
+            face24
+            face25
+            face26
+            face27
+            face28
+            face29
+            face30
+            face31
+            face32
+            face33
+            face34
+            face35
+            face36
+            face37
+            face38
+            face39
+            face40
+            face41
+            face42
+            face43
+            face44
+            face45
+            face46
+            face47
+            face48
+            face49
+            face50
+            face51
+            face52
+            face53
+            face54
+            face55
+            face56
+            face57
+            face58
+            face59
+            face61
+            face62
+            face63
+            face65
+            face66
+            face68
+            face69
+            face70
+            face71
+            face72
+            face73
+            face74
+            face75
+            face76
+            face77
+            face78
+            face79
+            face80
+            face81
+            face82
+            face83
+            face84
+            face85
+            face86
+            face87
+            face88
+            face89
+        );
+        CofR (0.2 0.0 0.0);
+        rho rhoInf;
+        rhoInf 997.33;
+        scaleFactor 1.0;
+        p p;
+        U U;
+    }
+    faceSource30_p {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (p);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 997.33;
+        writeFields no;
+    }
+    faceSource30_nut {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (nut);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource30_k {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (k);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource30_omega {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (omega);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource30_Ux {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 0;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource30_Uy {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource30_Uz {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face1;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 2;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_p {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (p);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 997.33;
+        writeFields no;
+    }
+    faceSource31_nut {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (nut);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_k {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (k);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_omega {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (omega);
+        componentToWrite -1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_Ux {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 0;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_Uy {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 1;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+    faceSource31_Uz {
+        enabled on;
+        executeControl timeStep;
+        executeInterval 10;
+        writeControl timeStep;
+        writeInterval 10;
+        log off;
+        type surfaceFieldValue;
+        libs ("libfieldFunctionObjects.so");
+        valueOutput on;
+        regionType patch;
+        name face7;
+        operation areaAverage;
+        fields (U);
+        componentToWrite 2;
+        surfaceFormat null;
+        scaleFactor 1.0;
+        writeFields no;
+    }
+}
+libs ("libchtgfm.so");
+application simpleFoam;
+startFrom startTime;
+stopAt writeNow;
+purgeWrite 0;
+writeFormat ascii;
+writePrecision 12;
+writeCompression on;
+timeFormat general;
+timePrecision 12;
+runTimeModifiable yes;
+deltaT 1.0;
+startTime 0;
+endTime 4000.0;
+adjustTimeStep no;
+writeControl timeStep;
+writeInterval 500;

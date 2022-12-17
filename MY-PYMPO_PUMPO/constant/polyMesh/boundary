@@ -1,0 +1,644 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+89
+(
+    face1
+    {
+        type            patch;
+        nFaces          3504;
+        startFace       12091969;
+    }
+    face2
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          22133;
+        startFace       12095473;
+    }
+    face3
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          22133;
+        startFace       12117606;
+    }
+    face4
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          4020;
+        startFace       12139739;
+    }
+    face5
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1172;
+        startFace       12143759;
+    }
+    face6
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1154;
+        startFace       12144931;
+    }
+    face7
+    {
+        type            patch;
+        nFaces          664;
+        startFace       12146085;
+    }
+    face8
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5314;
+        startFace       12146749;
+    }
+    face9
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          10403;
+        startFace       12152063;
+    }
+    face10
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          7075;
+        startFace       12162466;
+    }
+    face11
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          14218;
+        startFace       12169541;
+    }
+    face12
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          22499;
+        startFace       12183759;
+    }
+    face13
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5598;
+        startFace       12206258;
+    }
+    face14
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          39650;
+        startFace       12211856;
+    }
+    face15
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          21689;
+        startFace       12251506;
+    }
+    face16
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          14831;
+        startFace       12273195;
+    }
+    face17
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          36263;
+        startFace       12288026;
+    }
+    face18
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          12396;
+        startFace       12324289;
+    }
+    face19
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          13192;
+        startFace       12336685;
+    }
+    face20
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          15798;
+        startFace       12349877;
+    }
+    face21
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          16214;
+        startFace       12365675;
+    }
+    face22
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          683;
+        startFace       12381889;
+    }
+    face23
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          583;
+        startFace       12382572;
+    }
+    face24
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1363;
+        startFace       12383155;
+    }
+    face25
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1434;
+        startFace       12384518;
+    }
+    face26
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1871;
+        startFace       12385952;
+    }
+    face27
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1833;
+        startFace       12387823;
+    }
+    face28
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1566;
+        startFace       12389656;
+    }
+    face29
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2088;
+        startFace       12391222;
+    }
+    face30
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          248;
+        startFace       12393310;
+    }
+    face31
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2094;
+        startFace       12393558;
+    }
+    face32
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          240;
+        startFace       12395652;
+    }
+    face33
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          953;
+        startFace       12395892;
+    }
+    face34
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1182;
+        startFace       12396845;
+    }
+    face35
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3129;
+        startFace       12398027;
+    }
+    face36
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3848;
+        startFace       12401156;
+    }
+    face37
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          969;
+        startFace       12405004;
+    }
+    face38
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1168;
+        startFace       12405973;
+    }
+    face39
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1964;
+        startFace       12407141;
+    }
+    face40
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3203;
+        startFace       12409105;
+    }
+    face41
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3349;
+        startFace       12412308;
+    }
+    face42
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2317;
+        startFace       12415657;
+    }
+    face43
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3214;
+        startFace       12417974;
+    }
+    face44
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1801;
+        startFace       12421188;
+    }
+    face45
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3214;
+        startFace       12422989;
+    }
+    face46
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1875;
+        startFace       12426203;
+    }
+    face47
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1906;
+        startFace       12428078;
+    }
+    face48
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          980;
+        startFace       12429984;
+    }
+    face49
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1224;
+        startFace       12430964;
+    }
+    face50
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2263;
+        startFace       12432188;
+    }
+    face51
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          234;
+        startFace       12434451;
+    }
+    face52
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1060;
+        startFace       12434685;
+    }
+    face53
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1228;
+        startFace       12435745;
+    }
+    face54
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1892;
+        startFace       12436973;
+    }
+    face55
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          254;
+        startFace       12438865;
+    }
+    face56
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1926;
+        startFace       12439119;
+    }
+    face57
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          279;
+        startFace       12441045;
+    }
+    face58
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1157;
+        startFace       12441324;
+    }
+    face59
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1256;
+        startFace       12442481;
+    }
+    face60
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5409;
+        startFace       12443737;
+    }
+    face61
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2230;
+        startFace       12449146;
+    }
+    face62
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3082;
+        startFace       12451376;
+    }
+    face63
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1830;
+        startFace       12454458;
+    }
+    face64
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          16321;
+        startFace       12456288;
+    }
+    face65
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1205;
+        startFace       12472609;
+    }
+    face66
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          4153;
+        startFace       12473814;
+    }
+    face67
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5208;
+        startFace       12477967;
+    }
+    face68
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3167;
+        startFace       12483175;
+    }
+    face69
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2269;
+        startFace       12486342;
+    }
+    face70
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3074;
+        startFace       12488611;
+    }
+    face71
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1838;
+        startFace       12491685;
+    }
+    face72
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3593;
+        startFace       12493523;
+    }
+    face73
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1882;
+        startFace       12497116;
+    }
+    face74
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3151;
+        startFace       12498998;
+    }
+    face75
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2254;
+        startFace       12502149;
+    }
+    face76
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1922;
+        startFace       12504403;
+    }
+    face77
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          413;
+        startFace       12506325;
+    }
+    face78
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1744;
+        startFace       12506738;
+    }
+    face79
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1064;
+        startFace       12508482;
+    }
+    face80
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1096;
+        startFace       12509546;
+    }
+    face81
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1345;
+        startFace       12510642;
+    }
+    face82
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1052;
+        startFace       12511987;
+    }
+    face83
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1271;
+        startFace       12513039;
+    }
+    face84
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1018;
+        startFace       12514310;
+    }
+    face85
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          919;
+        startFace       12515328;
+    }
+    face86
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1172;
+        startFace       12516247;
+    }
+    face87
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1118;
+        startFace       12517419;
+    }
+    face88
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          928;
+        startFace       12518537;
+    }
+    face89
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1044;
+        startFace       12519465;
+    }
+)
+
+// ************************************************************************* //
