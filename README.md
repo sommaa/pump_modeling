@@ -6,6 +6,7 @@ Modeling of a centrifugal water pump, placed in a steam reforming plant, using [
 - $\omega = 160 rad/s$,
 - $\eta = 0.6$,
 - $Q = 1.097*10^{-2} m^3/s$
+- $D_{rotor} = 22.3cm$
 
 ## Geometrical details
 ![alt text](https://github.com/sommaa/pump_modeling/blob/main/images/Rotor.jpeg)
