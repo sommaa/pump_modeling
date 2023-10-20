@@ -1,5 +1,5 @@
 # pump_modeling
-Modeling of a centrifugal water pump, placed in a steam reforming plant, using [OpenFoam v2206](https://www.openfoam.com/news/main-news/openfoam-v2206):
+Modeling of a centrifugal water pump, for a steam reforming plant, using [OpenFoam v2206](https://www.openfoam.com/news/main-news/openfoam-v2206):
 - 7Mln cells mesh,
 - MRF zone, 
 - $\Delta p = 2.1 bar$,
